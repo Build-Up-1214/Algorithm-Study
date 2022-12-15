@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class 스택 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));   // 입력
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); // 출력
