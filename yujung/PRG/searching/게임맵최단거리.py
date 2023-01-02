@@ -20,7 +20,6 @@ def solution(maps):
 
                 if nx < 0 or nx >= len(maps) or ny < 0 or ny >= len(maps[0]):
                     continue
-                []
 
                 if maps[nx][ny] == 0:
                     continue
