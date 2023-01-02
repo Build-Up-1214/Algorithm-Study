@@ -9,7 +9,7 @@ public class 큐2{
 
         int N = Integer.parseInt(br.readLine());
 
-        Queue queue = new Queue();
+        queue queue = new queue();
 
         for(int i = 0; i < N; i++){
             StringTokenizer st = new StringTokenizer(br.readLine());
@@ -37,40 +37,41 @@ public class 큐2{
         System.out.println(sb);
         br.close();
     }
+
+    static class queue{
+        private final LinkedList<Integer> linkedList;
+
+        public queue() {
+            this.linkedList = new LinkedList<>();
+        }
+
+        public void push(int X) {
+            this.linkedList.addLast(X);
+        }
+
+        public int pop() {
+            if(linkedList.isEmpty()) return -1;
+            else return this.linkedList.removeFirst();
+        }
+
+        public int size() {
+            return linkedList.size();
+        }
+
+        public int empty() {
+            if(linkedList.isEmpty()) return 1;
+            else return 0;
+        }
+
+        public int front() {
+            if(linkedList.isEmpty()) return -1;
+            else return this.linkedList.getFirst();
+        }
+
+        public int back() {
+            if(linkedList.isEmpty()) return -1;
+            else return this.linkedList.getLast();
+        }
+    }
 }
 
-class Queue{
-    private final LinkedList<Integer> linkedList;
-
-    public Queue() {
-        this.linkedList = new LinkedList<>();
-    }
-
-    public void push(int X) {
-        this.linkedList.addLast(X);
-    }
-
-    public int pop() {
-        if(linkedList.isEmpty()) return -1;
-        else return this.linkedList.removeFirst();
-    }
-
-    public int size() {
-        return linkedList.size();
-    }
-
-    public int empty() {
-        if(linkedList.isEmpty()) return 1;
-        else return 0;
-    }
-
-    public int front() {
-        if(linkedList.isEmpty()) return -1;
-        else return this.linkedList.getFirst();
-    }
-
-    public int back() {
-        if(linkedList.isEmpty()) return -1;
-        else return this.linkedList.getLast();
-    }
-}

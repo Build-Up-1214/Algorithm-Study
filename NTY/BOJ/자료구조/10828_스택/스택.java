@@ -35,42 +35,43 @@ public class 스택 {
         bw.close();
         br.close();
     }
+
+    static class Stack {
+        private int top;
+        private int stackArr[];
+
+        public Stack(int size) {
+            this.top = -1;  // -1부터 시작 -> index 0 고려
+            this.stackArr = new int[size];  // size 크기의 배열생성(최대 크기 -> 다 push 경우)
+        }
+
+        // 명령어 push
+        public void push(int x){
+            this.stackArr[++top] = x;   // 가리키는 위치(맨 위) 증가 후 삽입
+        }
+
+        // 명령어 pop
+        public int pop(){
+            if(top == -1) return -1;    // 삽입된게 없으면 -1
+            return this.stackArr[top--];    // 가리키는 위치(맨 위) 감소
+        }
+
+        // 명령어 size
+        public int size() {
+            return this.top + 1;    // 초기값 -1 이므로
+        }
+
+        // 명령어 empty
+        public int empty() {
+            if(top == -1) return 1; // 초기값이면, push 된게 없으면 1
+            return 0;   // 존재하면 0
+        }
+
+        // 명령어 top
+        public int top() {
+            if(top == -1) return -1;   // 삽입된게 없으면 -1
+            else return this.stackArr[top]; // 제일 마지막으로 가리키는 것 반환
+        }
+    }
 }
 
-class Stack {
-    private int top;
-    private int stackArr[];
-
-    public Stack(int size) {
-        this.top = -1;  // -1부터 시작 -> index 0 고려
-        this.stackArr = new int[size];  // size 크기의 배열생성(최대 크기 -> 다 push 경우)
-    }
-
-    // 명령어 push
-    public void push(int x){
-        this.stackArr[++top] = x;   // 가리키는 위치(맨 위) 증가 후 삽입
-    }
-
-    // 명령어 pop
-    public int pop(){
-        if(top == -1) return -1;    // 삽입된게 없으면 -1
-        return this.stackArr[top--];    // 가리키는 위치(맨 위) 감소
-    }
-
-    // 명령어 size
-    public int size() {
-        return this.top + 1;    // 초기값 -1 이므로
-    }
-
-    // 명령어 empty
-    public int empty() {
-        if(top == -1) return 1; // 초기값이면, push 된게 없으면 1
-        return 0;   // 존재하면 0
-    }
-
-    // 명령어 top
-    public int top() {
-        if(top == -1) return -1;   // 삽입된게 없으면 -1
-        else return this.stackArr[top]; // 제일 마지막으로 가리키는 것 반환
-    }
-}
