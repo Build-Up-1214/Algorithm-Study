@@ -43,6 +43,7 @@ git commit -m "문제플랫폼 : 문제번호 문제유형 문제명"
 백준: BOJ
 프로그래머스: PRG
 SW Expert Academy: SWEA
+LeetCode: LTC
 ```
 * 유형에 따라 Pull Request를 생성하며, 하나의 문제를 Commit 단위로 합니다.
 * 팀원들의 리뷰를 받고 싶은 문제가 있는 경우 Pull Request의 Reviewer를 활용합니다.
@@ -55,3 +56,4 @@ SW Expert Academy: SWEA
 | 1                              | 2022.12.14 ~ 2022.12.18       | 자료구조                   |
 | 2                              | 2022.12.19 ~ 2022.12.25       | 정렬                       |
 | 3                              | 2022.12.26 ~ 2023.01.01       | 그래프, DFS와 BFS           |
+| 4                              | 2023.01.02 ~ 2023.01.08       | 복습                       |
