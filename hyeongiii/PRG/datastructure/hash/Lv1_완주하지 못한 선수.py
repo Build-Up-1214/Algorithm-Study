@@ -42,6 +42,7 @@ def solution(participant, completion):
 
 # hash 활용
 def solution(participant, completion):
+    answer = ''
     sumHash = 0
     dic = {}
 
@@ -50,9 +51,11 @@ def solution(participant, completion):
         sumHash += int(hash(part))
 
     for com in completion:
-        sumHash -= int(hash(com))
+        sumHash -= hash(com)
 
-    return dic[sumHash]
+    answer = dic[sumHash]
+
+    return answer
 
 '''
 HashMap : key-value 짝을 이뤄 관리하는 클래스로, 이 문제에서 key는 hash한 값이고 value는 각 선수의 이름이다.
