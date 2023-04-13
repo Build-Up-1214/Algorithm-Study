@@ -1,4 +1,11 @@
 def solution(arr):
+    answer = [arr[0]]
+    for i in arr:
+        if answer[-1] != i:
+            answer.append(i)
+    return answer
+"""
+def solution(arr):
     
     answer = []
     answer.append(arr[0]) # 첫 번째 요소를 스택에 넣는다
@@ -10,3 +17,4 @@ def solution(arr):
             answer.append(arr[i]) # 현재 요소가 이전 요소와 다를 경우 스택에 넣는다
     
     return answer
+"""
